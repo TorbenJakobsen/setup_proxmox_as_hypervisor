@@ -14,3 +14,77 @@ A better way is to use Ansible, and I will get there eventually.
 
 Initial Housekeeping
 ====================
+
+
+Templates
+=========
+
+Example for Debian/Ubuntu.
+
+Proably install QEMU
+
+
+CloudInit
+
+.. code: bash
+
+  sudo apt install cloud-init
+
+Reset SSH host keys
+
+.. code: bash
+
+  cd /etc/ssh
+  sudo rm ssh_host_*
+
+Missing will trigger CloudInit to create.
+
+
+Machine dependencies
+
+The machine id needs to be unique
+
+.. code: bash
+
+  cat /etc/machine-id
+    
+  sudo truncate -s 0 /etc/machine-id
+
+Also check symbolic link
+
+  /var/lib/dbus/machine-id
+
+Create it if missing
+
+.. code: bash
+
+  sudo ln -s /etc/machine-id /var/lib/dbus/machine-id
+
+Clean out 
+
+.. code: bash
+
+  sudo apt clean
+  sudo apt autoremove
+
+
+Shut down to make cahnges in PVE console
+
+- Convert to Template
+- Remove CD ROM iso if present
+- add  CloudInit drive
+- edit canges in CloudInit drive. eg user
+- click regenerate image
+
+ready for "clone" Template
+prefer full clone instead of "linked"
+
+
+Update hostname
+
+.. code:
+
+  sudo nano /etc/hostname
+
+  sudo nano /etc/hosts
+  
