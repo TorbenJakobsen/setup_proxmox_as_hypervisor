@@ -33,7 +33,7 @@ Reset SSH host keys
 
 .. code:: bash
   
-cd /etc/ssh
+  cd /etc/ssh
   sudo rm ssh_host_*
 
 Missing will trigger CloudInit to create.
@@ -42,25 +42,25 @@ Machine dependencies
 
 The machine id needs to be unique
 
-.. code: bash
+.. code:: bash
 
   cat /etc/machine-id
     
   sudo truncate -s 0 /etc/machine-id
 
-Also check symbolic link
+Also check symbolic link::
 
   /var/lib/dbus/machine-id
 
 Create it if missing
 
-.. code: bash
+.. code:: bash
 
   sudo ln -s /etc/machine-id /var/lib/dbus/machine-id
 
 Clean out 
 
-.. code: bash
+.. code:: bash
 
   sudo apt clean
   sudo apt autoremove
