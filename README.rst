@@ -21,10 +21,10 @@ Templates
 
 Example for Debian/Ubuntu.
 
-Proably install QEMU
+Optionally install QEMU
 
 
-CloudInit
+Optionally install CloudInit
 
 .. code: bash
   sudo apt install cloud-init
@@ -32,12 +32,10 @@ CloudInit
 Reset SSH host keys
 
 .. code: bash
-
   cd /etc/ssh
   sudo rm ssh_host_*
 
 Missing will trigger CloudInit to create.
-
 
 Machine dependencies
 
@@ -75,8 +73,8 @@ Shut down to make cahnges in PVE console
 - edit canges in CloudInit drive. eg user
 - click regenerate image
 
-ready for "clone" Template
-prefer full clone instead of "linked"
+| Ready for "clone" Template
+| Prefer full clone instead of "linked"
 
 
 Update hostname
