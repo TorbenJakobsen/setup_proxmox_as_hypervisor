@@ -23,17 +23,17 @@ Example for Debian/Ubuntu.
 
 Optionally install QEMU
 
-
 Optionally install CloudInit
 
 .. code:: bash
 
-sudo apt install cloud-init
+  sudo apt install cloud-init
 
 Reset SSH host keys
 
 .. code:: bash
-  cd /etc/ssh
+  
+cd /etc/ssh
   sudo rm ssh_host_*
 
 Missing will trigger CloudInit to create.
