@@ -26,13 +26,13 @@ Optionally install QEMU
 
 Optionally install CloudInit
 
-.. code-block: bash
+.. code:: bash
 
 sudo apt install cloud-init
 
 Reset SSH host keys
 
-.. code-block: bash
+.. code:: bash
   cd /etc/ssh
   sudo rm ssh_host_*
 
