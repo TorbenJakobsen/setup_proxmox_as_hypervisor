@@ -27,7 +27,6 @@ Proably install QEMU
 CloudInit
 
 .. code: bash
-
   sudo apt install cloud-init
 
 Reset SSH host keys
