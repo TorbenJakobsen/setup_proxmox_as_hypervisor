@@ -72,6 +72,8 @@ Depending on status and system:
 
 Details for Windows can be found at https://pve.proxmox.com/wiki/Qemu-guest-agent
 
+
+
 *************
   Templates
 *************
@@ -133,4 +135,3 @@ Shut down to make changes in PVE console
 | Personal choice: Prefer full clone instead of "linked"
 
 Update hostname
----------------
