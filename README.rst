@@ -35,8 +35,25 @@ Proxmox cluster (also with just one Node).
 - Ansible
 - Proxmox API: https://pve.proxmox.com/wiki/Proxmox_VE_API
 
-QEMU
-====
+Initial Housekeeping
+====================
+
+Proxmox Update Repositories
+
+  ...
+
+The usual:
+
+.. code:: bash
+
+  apt update && apt dist-upgrade -y
+
+***************************************
+  LXC Containers and Virtual Machines
+***************************************
+
+VM - QEMU
+=========
 
 Optionally install QEMU (only for VMs).
 
@@ -68,19 +85,9 @@ Depending on status and system:
 
 Details for Windows can be found at https://pve.proxmox.com/wiki/Qemu-guest-agent
 
-Initial Housekeeping
-====================
-
-Proxmox Update Repositories
-
-The usual:
-
-.. code:: bash
-
-  apt update && apt dist-upgrade -y
-
-Templates
-=========
+*************
+  Templates
+*************
 
 Example for Debian/Ubuntu.
 
@@ -119,7 +126,7 @@ Create the symbolic link if missing
 
   sudo ln -s /etc/machine-id /var/lib/dbus/machine-id
 
-Clean out 
+Clean out package repositories
 
 .. code:: bash
 
@@ -137,7 +144,6 @@ Shut down to make changes in PVE console
 
 | Now ready for "Clone" Template
 | Personal choice: Prefer full clone instead of "linked"
-
 
 Update hostname
 ---------------
@@ -161,7 +167,7 @@ Ubuntu
 Not showing console
 ===================
 
-If the PVE web console does not show for a container - it happens for Debian.
+If the PVE web console does not show for a container (Debian).
 
 Open the *Node* console (e.g. :code:`pve2`):
 
