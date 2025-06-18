@@ -12,6 +12,17 @@ Documents my *personal* setup.
 
 A better way is to use Ansible, and I will get there eventually.
 
+QEMU
+====
+
+Optionally install QEMU.
+
+https://pve.proxmox.com/wiki/Qemu-guest-agent
+
+.. code:: bash
+
+  apt install qemu-guest-agent
+
 Initial Housekeeping
 ====================
 
@@ -21,7 +32,6 @@ Templates
 
 Example for Debian/Ubuntu.
 
-Optionally install QEMU
 
 Optionally install CloudInit
 
@@ -85,4 +95,20 @@ Update hostname
   sudo nano /etc/hostname
 
   sudo nano /etc/hosts
-  
+
+*******************
+  Troubleshooting
+*******************
+
+Not showing console
+===================
+
+If the console does not show in Proxmox - it happens for Debian.
+
+Open *server* console (e.g. :code:`pve2`):
+
+.. code:: bash
+
+  pct enter vmid
+
+For example :code:`pct enter 1001`.
