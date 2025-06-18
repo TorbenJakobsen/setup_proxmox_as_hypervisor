@@ -16,6 +16,12 @@ You can find more information and offical documentation here:
   | PVE is licensed per CPU socket.
   | There is a free tier with only community support and without the enterprise grade components.
 
+You can find scripts that does what this document ries to at: 
+https://community-scripts.github.io/ProxmoxVE/scripts
+
+.. warning::
+  Always inspect the source as in general public files are not to be trusted!
+
 ****************
   Introduction
 ****************
