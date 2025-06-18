@@ -4,13 +4,35 @@
 
 https://www.proxmox.com/
 
+Going forward I will shorten 'Proxmox Virtual Environment' to 'PVE' or sometimes 'pve'.
+
+You can find more information:
+
+- Proxmox VE Documentation - https://pve.proxmox.com/pve-docs/index.html
+- Proxmox Forum - https://pve.proxmox.com/pve-docs/index.html
+
+.. note::
+
+  | PVE is licensed per CPU socket.
+  |
+  | There is a free tier with only community support and without the enterprise grade components.
+
 ****************
   Introduction
 ****************
 
 Documents my *personal* setup.
 
-A better way is to use Ansible, and I will get there eventually.
+.. note::
+
+  | This is not intended for a productive environment!
+  | Use at yur own risk.
+
+Besides the web console there are other ways to manage a 
+Proxmox cluster (also with just one Node).
+
+- Ansible
+- Proxmox API: https://pve.proxmox.com/wiki/Proxmox_VE_API
 
 QEMU
 ====
@@ -26,6 +48,13 @@ https://pve.proxmox.com/wiki/Qemu-guest-agent
 Initial Housekeeping
 ====================
 
+Proxmox Update Repositories
+
+The usual:
+
+.. code:: bash
+
+  apt update && apt dist-upgrade -y
 
 Templates
 =========
@@ -50,7 +79,7 @@ Missing will trigger CloudInit to create.
 
 Machine dependencies
 
-The machine id needs to be unique
+The "machine id" needs to be unique across both CTs and VMs.
 
 .. code:: bash
 
@@ -75,22 +104,24 @@ Clean out
   sudo apt clean
   sudo apt autoremove
 
-
-Shut down to make cahnges in PVE console
+Shut down to make changes in PVE console
 
 - Convert to Template
-- Remove CD ROM iso if present
-- add  CloudInit drive
-- edit canges in CloudInit drive. eg user
-- click regenerate image
+- Remove/eject CD ROM if present (ISO image)
+- Optionally add  CloudInit drive
+- Enable QEMU if guest is installed
+- Edit changes in CloudInit drive. eg user
+- Click regenerate image
 
-| Ready for "clone" Template
-| Prefer full clone instead of "linked"
+| Now ready for "Clone" Template
+| Personal choice: Prefer full clone instead of "linked"
 
 
 Update hostname
 
-.. code:
+For Debian:
+
+.. code:: bash
 
   sudo nano /etc/hostname
 
@@ -103,12 +134,17 @@ Update hostname
 Not showing console
 ===================
 
-If the console does not show in Proxmox - it happens for Debian.
+If the PVE web console does not show for a container - it happens for Debian.
 
-Open *server* console (e.g. :code:`pve2`):
+Open the *Node* console (e.g. :code:`pve2`):
 
 .. code:: bash
 
   pct enter vmid
 
 For example :code:`pct enter 1001`.
+
+From :code:`man pct`
+
+  :code:`pct - Tool to manage Linux Containers (LXC) on Proxmox VE`
+
