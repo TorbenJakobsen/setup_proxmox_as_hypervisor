@@ -13,7 +13,7 @@ You can find more information and offical documentation here:
 - Proxmox Wiki             - https://pve.proxmox.com/wiki/Main_Page
 
 .. note::
-  
+
   | PVE is licensed per CPU socket.
   | There is a free tier with only community support and without the enterprise grade components.
 
@@ -136,7 +136,6 @@ Update hostname
 ===============
 
 Debian
-------
 
 .. code:: bash
 
@@ -145,7 +144,6 @@ Debian
   sudo nano /etc/hosts
 
 Ubuntu
-------
 
 
 *******************
