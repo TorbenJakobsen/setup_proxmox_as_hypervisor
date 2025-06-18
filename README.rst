@@ -54,6 +54,17 @@ From https://pve.proxmox.com/wiki/Qemu-guest-agent
 
   apt install qemu-guest-agent
 
+Depending on status and system:
+
+.. code:: bash
+
+  systemctl status qemu-guest-agent
+
+  systemctl start qemu-guest-agent
+
+  systemctl enable qemu-guest-agent
+
+
 Initial Housekeeping
 ====================
 
