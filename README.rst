@@ -34,3 +34,41 @@ Proxmox cluster (also with just one Node).
 
 - Ansible
 - Proxmox API: https://pve.proxmox.com/wiki/Proxmox_VE_API
+
+***************************************
+  LXC Containers and Virtual Machines
+***************************************
+
+VM - QEMU
+=========
+
+Optionally install QEMU (only for VMs).
+
+From https://pve.proxmox.com/wiki/Qemu-guest-agent
+
+  | The ``qemu-guest-agent`` is a helper daemon, which is installed in the guest. 
+  | It is used to exchange information between the host and guest, and to execute command in the guest.
+  |
+  | In Proxmox VE, the ``qemu-guest-agent`` is used for mainly three things:
+  |
+  | # To properly shutdown the guest, instead of relying on ACPI commands or windows policies
+  | # To freeze the guest file system when making a backup/snapshot (on windows, use the volume shadow copy service VSS). 
+  |   If the guest agent is enabled and running, it calls ``guest-fsfreeze-freeze`` and ``guest-fsfreeze-thaw`` to improve consistency.
+  | # In the phase when the guest (VM) is resumed after pause (for example after snapshot) it immediately synchronizes its time with the hypervisor using ``qemu-guest-agent`` (as first step).
+
+.. code:: bash
+
+  apt install qemu-guest-agent
+
+Depending on status and system:
+
+.. code:: bash
+
+  systemctl status qemu-guest-agent
+
+  systemctl start qemu-guest-agent
+
+  systemctl enable qemu-guest-agent
+
+Details for Windows can be found at https://pve.proxmox.com/wiki/Qemu-guest-agent
+
