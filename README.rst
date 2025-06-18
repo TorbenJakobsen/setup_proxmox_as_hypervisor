@@ -13,6 +13,7 @@ You can find more information and offical documentation here:
 - Proxmox Wiki             - https://pve.proxmox.com/wiki/Main_Page
 
 .. note::
+  
   | PVE is licensed per CPU socket.
   | There is a free tier with only community support and without the enterprise grade components.
 
@@ -23,6 +24,7 @@ You can find more information and offical documentation here:
 Documents my *personal* setup.
 
 .. note::
+
   | This is not intended for a productive environment!
   | Use at your own risk.
 
@@ -145,7 +147,6 @@ Debian
 Ubuntu
 ------
 
-  ...
 
 *******************
   Troubleshooting
