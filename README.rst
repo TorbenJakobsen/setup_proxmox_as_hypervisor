@@ -4,7 +4,7 @@
 
 https://www.proxmox.com/
 
-Going forward I will shorten 'Proxmox Virtual Environment' to 'PVE' or sometimes 'pve'.
+Going forward I will shorten 'Proxmox Virtual Environment' to 'PVE' or 'pve'.
 
 You can find more information and offical documentation here:
 
