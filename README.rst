@@ -76,7 +76,6 @@ Details for Windows can be found at https://pve.proxmox.com/wiki/Qemu-guest-agen
 *************
 
 Debian/Ubuntu
--------------
 
 Optionally install CloudInit (only for VMs)
 
