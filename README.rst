@@ -6,10 +6,11 @@ https://www.proxmox.com/
 
 Going forward I will shorten 'Proxmox Virtual Environment' to 'PVE' or sometimes 'pve'.
 
-You can find more information:
+You can find more information and offical documentation here:
 
 - Proxmox VE Documentation - https://pve.proxmox.com/pve-docs/index.html
-- Proxmox Forum - https://pve.proxmox.com/pve-docs/index.html
+- Proxmox Support Forum    - https://forum.proxmox.com/
+- Proxmox Wiki             - https://pve.proxmox.com/wiki/Main_Page
 
 .. note::
 
@@ -45,6 +46,7 @@ From https://pve.proxmox.com/wiki/Qemu-guest-agent
   | It is used to exchange information between the host and guest, and to execute command in the guest.
   |
   | In Proxmox VE, the ``qemu-guest-agent`` is used for mainly three things:
+  |
   | * To properly shutdown the guest, instead of relying on ACPI commands or windows policies
   | * To freeze the guest file system when making a backup/snapshot (on windows, use the volume shadow copy service VSS). 
   |   If the guest agent is enabled and running, it calls ``guest-fsfreeze-freeze`` and ``guest-fsfreeze-thaw`` to improve consistency.
@@ -64,6 +66,7 @@ Depending on status and system:
 
   systemctl enable qemu-guest-agent
 
+Details for Windows can be found at https://pve.proxmox.com/wiki/Qemu-guest-agent
 
 Initial Housekeeping
 ====================
