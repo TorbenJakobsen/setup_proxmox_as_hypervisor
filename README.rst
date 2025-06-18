@@ -26,7 +26,7 @@ Documents my *personal* setup.
   | This is not intended for a productive environment!
   | Use at your own risk.
 
-| Besides the web console there are other ways to manage a 
+Besides the web console there are other ways to manage a 
 Proxmox cluster (also with just one Node).
 
 - Ansible
