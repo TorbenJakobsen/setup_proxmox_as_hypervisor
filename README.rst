@@ -135,3 +135,40 @@ Shut down to make changes in PVE console
 | Personal choice: Prefer full clone instead of "linked"
 
 Update hostname
+===============
+
+Debian
+------
+
+.. code:: bash
+
+  sudo nano /etc/hostname
+
+  sudo nano /etc/hosts
+
+Ubuntu
+------
+
+  ...
+
+*******************
+  Troubleshooting
+*******************
+
+Not showing console
+===================
+
+If the PVE web console does not show for a container (Debian).
+
+Open the *Node* console (e.g. :code:`pve2`):
+
+.. code:: bash
+
+  pct enter vmid
+
+For example :code:`pct enter 1001`.
+
+From :code:`man pct`
+
+  :code:`pct - Tool to manage Linux Containers (LXC) on Proxmox VE`
+
