@@ -37,7 +37,7 @@ Proxmox cluster (also with just one Node).
 QEMU
 ====
 
-Optionally install QEMU.
+Optionally install QEMU (only for VMs).
 
 From https://pve.proxmox.com/wiki/Qemu-guest-agent
 
@@ -46,14 +46,13 @@ From https://pve.proxmox.com/wiki/Qemu-guest-agent
   |
   | In Proxmox VE, the ``qemu-guest-agent`` is used for mainly three things:
   | * To properly shutdown the guest, instead of relying on ACPI commands or windows policies
-  | * To freeze the guest file system when making a backup/snapshot (on windows,use the volume shadow copy service VSS). 
+  | * To freeze the guest file system when making a backup/snapshot (on windows, use the volume shadow copy service VSS). 
   |   If the guest agent is enabled and running, it calls ``guest-fsfreeze-freeze`` and ``guest-fsfreeze-thaw`` to improve consistency.
   | * In the phase when the guest (VM) is resumed after pause (for example after snapshot) it immediately synchronizes its time with the hypervisor using ``qemu-guest-agent`` (as first step).
 
 .. code:: bash
 
   apt install qemu-guest-agent
-
 
 Initial Housekeeping
 ====================
@@ -71,8 +70,7 @@ Templates
 
 Example for Debian/Ubuntu.
 
-
-Optionally install CloudInit
+Optionally install CloudInit (only for VMs)
 
 .. code:: bash
 
@@ -101,7 +99,7 @@ Also check symbolic link::
 
   /var/lib/dbus/machine-id
 
-Create it if missing
+Create the symbolic link if missing
 
 .. code:: bash
 
@@ -117,8 +115,8 @@ Clean out
 Shut down to make changes in PVE console
 
 - Convert to Template
-- Remove/eject CD ROM if present (ISO image)
-- Optionally add  CloudInit drive
+- Remove/eject CD ROM if present (VMs / ISO image)
+- Optionally add CloudInit drive if package is installed 
 - Enable QEMU if guest is installed
 - Edit changes in CloudInit drive. eg user
 - Click regenerate image
@@ -128,14 +126,19 @@ Shut down to make changes in PVE console
 
 
 Update hostname
+---------------
 
-For Debian:
+Debian
+~~~~~~
 
 .. code:: bash
 
   sudo nano /etc/hostname
 
   sudo nano /etc/hosts
+
+Ubuntu
+~~~~~~~
 
 *******************
   Troubleshooting
