@@ -2,9 +2,18 @@
   Set up Proxmox as Hypervisor
 ################################
 
-https://www.proxmox.com/
+****************
+  Introduction
+****************
 
 Going forward I will shorten 'Proxmox Virtual Environment' to 'PVE' or 'pve'.
+
+https://www.proxmox.com/
+
+.. note::
+
+  | PVE is licensed per CPU socket.
+  | There is a free tier with only community support and without the enterprise grade components.
 
 You can find more information and offical documentation here:
 
@@ -12,28 +21,33 @@ You can find more information and offical documentation here:
 - Proxmox Support Forum    - https://forum.proxmox.com/
 - Proxmox Wiki             - https://pve.proxmox.com/wiki/Main_Page
 
-.. note::
-  | PVE is licensed per CPU socket.
-  | There is a free tier with only community support and without the enterprise grade components.
+| A collection of very helpful scripts, which are trusted and highly regarded by the FOSS community.
+| The author **tteck** has passed (https://github.com/tteck/Proxmox/discussions/4009) and the repository is archived.
 
-You can find scripts that does what this document ries to at: 
+- https://tteck.github.io/Proxmox/  - project home page
+- https://github.com/tteck          - repository home     
+
+You can find scripts that does what this document tries to at: 
 https://community-scripts.github.io/ProxmoxVE/scripts
 
 .. warning::
-  Always inspect the source as in general public files are not to be trusted!
 
-****************
-  Introduction
-****************
+  Be cautious and always inspect the source of public files!
+
+***************
+  Information
+***************
 
 Documents my *personal* setup.
 
 .. note::
+
   | This is not intended for a productive environment!
   | Use at your own risk.
+  | 
 
-Besides the web console there are other ways to manage a 
-Proxmox cluster (also with just one Node).
+Besides the web console there are other ways to manage a Proxmox cluster 
+-- also with just one Node, which is very common.
 
 - Ansible
 - Proxmox API: https://pve.proxmox.com/wiki/Proxmox_VE_API
@@ -42,10 +56,10 @@ Proxmox cluster (also with just one Node).
   LXC Containers and Virtual Machines
 ***************************************
 
-VM - QEMU
-=========
+QEMU
+====
 
-Optionally install QEMU (only for VMs).
+Optionally install QEMU (only for VMs?).
 
 From https://pve.proxmox.com/wiki/Qemu-guest-agent
 
@@ -81,7 +95,7 @@ Details for Windows can be found at https://pve.proxmox.com/wiki/Qemu-guest-agen
 
 Debian/Ubuntu
 
-Optionally install CloudInit (only for VMs)
+Optionally install CloudInit (only for VMs!).
 
 .. code:: bash
 
@@ -94,7 +108,7 @@ Reset SSH host keys
   cd /etc/ssh
   sudo rm ssh_host_*
 
-Missing keys will trigger CloudInit to create.
+Missing keys will trigger CloudInit (if installed) to create.
 
 Machine dependencies
 
