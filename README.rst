@@ -183,3 +183,4 @@ From :code:`man pct`
 
   :code:`pct - Tool to manage Linux Containers (LXC) on Proxmox VE`
 
+.. image:: ./media/pct_enter_100.png
