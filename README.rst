@@ -189,3 +189,31 @@ For example: :code:`pct enter 100`.
 From :code:`man pct`: ::
 
   pct - Tool to manage Linux Containers (LXC) on Proxmox VE
+
+***********************
+  Container Templates
+***********************
+
+- https://github.com/TorbenJakobsen/run-docker-in-proxmox-lxc
+
+**********************
+  Running Containers
+**********************
+
+- https://github.com/TorbenJakobsen/run_sap_as_a_container
+
+******************************
+  Virtual Machines Templates
+******************************
+
+****************************
+  Running Virtual Machines
+****************************
+
+*********************
+  TODO and Wishlist
+*********************
+
+- apt cache
+- Multiple DHCP servers
+- pi-hole
