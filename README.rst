@@ -183,6 +183,6 @@ For example: :code:`pct enter 100`.
   :alt: pct enter 100
   :align: left
 
-From :code:`man pct`:::
+From :code:`man pct`: ::
 
   pct - Tool to manage Linux Containers (LXC) on Proxmox VE
