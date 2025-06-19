@@ -23,12 +23,10 @@ You can find more information and offical documentation here:
 
 | A collection of very helpful scripts, which are trusted and highly regarded by the FOSS community.
 | The author **tteck** has passed (https://github.com/tteck/Proxmox/discussions/4009) and the repository is archived.
+  |
 
 - https://tteck.github.io/Proxmox/  - project home page
 - https://github.com/tteck          - repository home     
-
-You can find scripts that does what this document tries to at: 
-https://community-scripts.github.io/ProxmoxVE/scripts
 
 .. warning::
 
@@ -44,7 +42,7 @@ Documents my *personal* setup.
 
   | This is not intended for a productive environment!
   | Use at your own risk.
-  | 
+    |
 
 Besides the web console there are other ways to manage a Proxmox cluster 
 -- also with just one Node, which is very common.
