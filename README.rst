@@ -140,9 +140,9 @@ Shut down to make changes in PVE console
 
 - Convert to Template
 - Remove/eject CD ROM if present (VMs / ISO image)
-- Optionally add CloudInit drive if package is installed 
+- Optionally add CloudInit drive (if CloudInit is installed) 
 - Enable QEMU if guest is installed
-- Edit changes in CloudInit drive. eg user
+- Edit changes in CloudInit drive, e.g. user
 - Click regenerate image
 
 | Now ready for "Clone" Template
@@ -177,10 +177,12 @@ Open the *Node* console (e.g. :code:`pve2`):
 
   pct enter vmid
 
-For example :code:`pct enter 1001`.
-
-From :code:`man pct`
-
-  :code:`pct - Tool to manage Linux Containers (LXC) on Proxmox VE`
+For example: :code:`pct enter 100`.
 
 .. image:: ./media/pct_enter_100.png
+  :alt: pct enter 100
+  :align: left
+
+From :code:`man pct`:
+
+  pct - Tool to manage Linux Containers (LXC) on Proxmox VE
