@@ -161,6 +161,9 @@ Debian
 
 Ubuntu
 
+.. code:: bash
+ 
+  ...
 
 *******************
   Troubleshooting
