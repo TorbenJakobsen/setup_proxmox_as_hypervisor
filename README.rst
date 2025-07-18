@@ -210,6 +210,14 @@ From :code:`man pct`: ::
   Running Virtual Machines
 ****************************
 
+*******************************
+  Proxmox Backup Server (PBS)
+*******************************
+
+Going forward I will shorten 'Proxmox Backup Server' to 'PBS' or 'pbs'.
+
+https://www.proxmox.com/en/products/proxmox-backup-server/overview
+
 *********************
   TODO and Wishlist
 *********************
